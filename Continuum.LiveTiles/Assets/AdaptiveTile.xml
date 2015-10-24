@@ -1,0 +1,29 @@
+﻿<tile>
+  <visual>
+
+    <binding template="TileSmall">
+      <image src="https://www.thatconference.com/images/Nav-Tree.png" hint-align="center" />
+    </binding>
+
+    <binding template="TileMedium">
+      <text hint-style="captionSubtle">Medium Tile</text>
+      <image src="http://milwaukeecodecamp.com/Images/mkecc-logo-full-color.png" hint-removeMargin="true" />
+      
+    </binding>
+
+    <binding template="TileWide">
+      <text hint-style="subtitle">Welcome to: Milwaukee Code Camp!</text>
+      <text hint-style="captionSubtle">Wide tile</text>
+      <image src="http://milwaukeecodecamp.com/Images/mkecc-logo-full-color.png" hint-removeMargin="true" />
+    </binding>
+
+    <binding template="TileLarge">
+      <text hint-style="subtitle">Welcome to:</text>
+      <text hint-style="subtitle">Milwaukee </text>
+      <text hint-style="subtitle">Code Camp!</text>
+      <text hint-style="captionSubtle">Large tile</text>
+      <image src="http://milwaukeecodecamp.com/Images/mkecc-logo-full-color.png" hint-removeMargin="true" />
+    </binding>
+
+  </visual>
+</tile>

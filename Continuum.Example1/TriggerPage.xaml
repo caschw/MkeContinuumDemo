@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Continuum.Example1.TriggerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Continuum.Example1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:triggers ="using:WindowsStateTriggers"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups><VisualStateGroup>
+            <VisualState x:Name="windows">
+                <VisualState.StateTriggers>
+                    <triggers:DeviceFamilyStateTrigger DeviceFamily="Desktop" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="greeting.Text" Value="Hello Windows!" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="phone">
+                <VisualState.StateTriggers>
+                    <triggers:DeviceFamilyStateTrigger DeviceFamily="Mobile" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="greeting.Text" Value="Hello Phone!" />
+                </VisualState.Setters>
+            </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <TextBlock x:Name="greeting" Margin="30" />
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Click="AppBarButton_Click" Icon="Back" />
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
